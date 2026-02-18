@@ -1,9 +1,13 @@
 
 # 📂 Document Viewer
 
+| Light Mode | Dark Mode |
+|------------|-----------|
+| ![Light Mode](./screenshots/light-mode.png) | ![Dark Mode](./screenshots/dark-mode.png) |
+
 A modern, responsive document management interface to provide a seamless way for users to browse files and folders. The application is designed to be fast, user-friendly, and visually consistent across all devices.
 
-**🚀 Live Demo:** [https://document-viewer-placeholder.vercel.app](https://document-viewer-placeholder.vercel.app)
+**🚀 Live Demo:** [https://brighthr-doc-viewer.vercel.app/](https://brighthr-doc-viewer.vercel.app/)
 
 ---
 
@@ -40,8 +44,8 @@ I have made it easy to get this project running on your local machine.
 First, download the code to your computer:
 
 ```bash
-git clone https://github.com/your-username/document-viewer.git
-cd document-viewer
+git clone https://github.com/Meldy2503/brighthr-doc-viewer.git
+cd brighthr-doc-viewer
 
 ```
 
