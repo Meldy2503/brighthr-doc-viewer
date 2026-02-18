@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --white: #ffffff;
+  --amber: #f5a623;
+  --amber-light: #fbbf49;
+  --amber-dim: rgba(245, 166, 35, 0.14);
+  --blue: #0960b7;
+  --blue-light: #1665b5;
+  --blue-dim: rgba(9, 96, 183, 0.14);
+  --pink: #ed419d;
+  --pink-light: #cb2787;
+  --pink-dim: rgba(54, 52, 54, 0.29);
+  --radius: 12px;
+  --transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Light Theme */
+  --bg-page: #f5fbfe;
+  --bg-card: #ffffff;
+  --bg-card-dim: #efefef;
+  --bg-card-alt: #faf8f4;
+  --bg-folder: #fbf6ec;
+  --bg-topbar: #ffffff;
+  --bg-sidebar: #10162f;
+  --bg-side-mid: #1a2540;
+  --bg-side-hi: #0960b7;
+  --bg-modal: #ffffff;
+  --bg-overlay: rgba(15, 24, 41, 0.55);
+  --border: #e8eaf0;
+  --border-folder: #fde8b8;
+  --text-primary: #0f1829;
+  --text-mid: #4a5568;
+  --text-light: #8896b0;
+  --text-white: #ffffff;
+  --shadow-md:
+    0 4px 16px rgba(15, 24, 41, 0.1), 0 2px 4px rgba(15, 24, 41, 0.06);
+  --shadow-modal: 0 32px 80px rgba(15, 24, 41, 0.22);
+}
+
+[data-theme="dark"] {
+  --bg-page: #19212c;
+  --bg-card: #161b22;
+  --bg-card-alt: #1a2130;
+  --bg-card-dim: #141820;
+  --bg-folder: #372e1331;
+  --bg-topbar: #161b22;
+  --bg-sidebar: #0f1420;
+  --bg-side-mid: #111520;
+  --bg-side-hi: #0960b7;
+  --bg-modal: #19212c;
+  --bg-overlay: rgba(0, 0, 0, 0.6);
+  --border: #2a3244;
+  --border-folder: #3d3010;
+  --text-primary: #bdc1c5;
+  --text-mid: #9aa7c0;
+  --text-light: #4a5568;
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-modal: 0 32px 80px rgba(0, 0, 0, 0.6);
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-page text-text-primary min-h-screen transition-colors duration-200 ease-in-out;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--text-light);
+  border-radius: 4px;
+  opacity: 0.5;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-mid);
+}
