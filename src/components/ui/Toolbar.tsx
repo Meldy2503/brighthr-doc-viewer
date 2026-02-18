@@ -66,7 +66,7 @@ const Toolbar = <T extends string>({
 
           return (
             <button
-              aria-label="Sort by"
+              aria-label={`Sort by ${option.label}`}
               key={option.value}
               ref={(el) => {
                 buttonsRef.current[index] = el;

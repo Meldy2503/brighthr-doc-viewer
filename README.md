@@ -72,11 +72,30 @@ The app will be available at **http://localhost:5173**.
 
 ## 🧪 Testing
 
-I included a testing suite to ensure the application remains stable during development.
+This project uses **Playwright** for End-to-End (E2E) testing to ensure stability across different browsers and screen sizes.
 
-- **Run Background Tests:** `npm run test:e2e`
-- **Open the Test UI:** `npm run test:e2e:ui` (This allows you to see the automated browser performing the tests in real-time).
-- **View Results:** `npm run test:e2e:report`
+### Prerequisites
+If running tests for the first time, ensure the Playwright browsers are installed:
+```bash
+npx playwright install
+
+```
+
+### Commands
+
+* **Run Headless Tests:** `npm run test:e2e`
+*Executes all 27 tests across Chromium, Firefox, and WebKit.*
+* **Interactive UI Mode:** `npm run test:e2e:ui`
+*Watch the automated browser perform tests in real-time with time-travel debugging.*
+* **View Reports:** `npm run test:e2e:report`
+*Generates a detailed HTML report of the test execution.*
+
+### Key Coverage
+
+* **Theme Logic:** Verifies Dark/Light mode toggling and state persistence.
+* **File Interactivity:** Validates folder navigation, search filtering, column sorting (Name/Date), and pagination.
+* **Accessibility:** Ensures all interactive elements have correct `aria-labels` and roles.
+* **CI/CD:** These tests are automatically executed via **GitHub Actions** on every push to the main branch to prevent regressions.
 
 ---
 

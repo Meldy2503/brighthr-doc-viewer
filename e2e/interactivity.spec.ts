@@ -3,7 +3,6 @@ import { test, expect } from "@playwright/test";
 test.describe("Search, Sort, and Pagination", () => {
   test.beforeEach(async ({ page }) => {
     await page.goto("/");
-    // wait for a specific row to ensure data is mounted
     await expect(
       page.locator('[data-testid="file-row"]').first(),
     ).toBeVisible();
@@ -24,7 +23,7 @@ test.describe("Search, Sort, and Pagination", () => {
   test("should sort files and folders in ascending and descending order", async ({
     page,
   }) => {
-    const nameSortBtn = page.getByRole("button", { name: "Name" });
+    const nameSortBtn = page.getByRole("button", { name: /Sort by Name/i });
     const rows = page.locator('[data-testid="file-row"]');
 
     // Set to sort files and folders in ascending or descending order
@@ -44,7 +43,7 @@ test.describe("Search, Sort, and Pagination", () => {
   }) => {
     const showMoreBtn = page.getByRole("button", { name: /Show More/i });
 
-    // Check if we have enough mock data to even show the button
+    // Check if we have enough mock data to show the button
     if (await showMoreBtn.isVisible()) {
       const initialCount = await page
         .locator('[data-testid="file-row"]')
