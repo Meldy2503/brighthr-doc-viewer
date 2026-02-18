@@ -40,7 +40,7 @@ export const Header: React.FC<HeaderProps> = ({
           className={`cursor-pointer transition-colors ${
             breadcrumbs.length === 0
               ? "text-text-mid font-medium"
-              : "text-text-light hover:text-blue"
+              : "text-text-mid hover:text-blue-light"
           }`}
           onClick={() => onNavigate(null)}
         >

@@ -21,6 +21,7 @@ const SearchInput = ({
       />
       {searchQuery && (
         <button
+          aria-label="Clear search"
           onClick={() => onSearch("")}
           className="absolute right-2.5 top-1/2 -translate-y-1/2 text-text-light hover:text-text-primary p-0.5"
         >

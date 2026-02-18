@@ -66,6 +66,7 @@ const Toolbar = <T extends string>({
 
           return (
             <button
+              aria-label="Sort by"
               key={option.value}
               ref={(el) => {
                 buttonsRef.current[index] = el;
@@ -95,6 +96,7 @@ const Toolbar = <T extends string>({
       {onViewModeChange && (
         <div className="flex border-[1.5px] border-border rounded-lg overflow-hidden bg-card mr-2 md:mr-4">
           <button
+            aria-label="List view"
             onClick={() => onViewModeChange("list")}
             className={`p-1.5 transition-colors ${
               viewMode === "list"
@@ -107,6 +109,7 @@ const Toolbar = <T extends string>({
           </button>
           <div className="w-[1.5px] bg-border" />
           <button
+            aria-label="Grid view"
             onClick={() => onViewModeChange("grid")}
             className={`p-1.5 transition-colors ${
               viewMode === "grid"

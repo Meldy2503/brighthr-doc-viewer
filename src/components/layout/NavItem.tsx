@@ -6,6 +6,7 @@ interface NavItemProps {
   to: string;
   badge?: string;
   isCollapsed?: boolean;
+  onClick?: () => void;
 }
 
 const NavItem: React.FC<NavItemProps> = ({
@@ -14,10 +15,12 @@ const NavItem: React.FC<NavItemProps> = ({
   to,
   badge,
   isCollapsed,
+  onClick,
 }) => {
   return (
     <NavLink
       to={to}
+      onClick={onClick}
       title={isCollapsed ? label : undefined}
       className={({ isActive }) => `
         relative flex items-center gap-3 px-2.5 py-3.5 rounded-lg cursor-pointer transition-colors group
@@ -33,12 +36,12 @@ const NavItem: React.FC<NavItemProps> = ({
             {icon}
           </div>
           {!isCollapsed && (
-            <span className="hidden lg:block text-[14px] font-medium flex-1 animate-in fade-in duration-200">
+            <span className="text-[14px] font-medium flex-1 animate-in fade-in duration-200">
               {label}
             </span>
           )}
           {badge && !isCollapsed && (
-            <span className="hidden lg:flex bg-blue text-text-primary text-[10px] font-bold px-1.5 py-[1px] rounded-full min-w-[18px] items-center justify-center animate-in fade-in duration-200">
+            <span className="flex bg-blue text-text-primary text-[10px] font-bold px-1.5 py-[1px] rounded-full min-w-[18px] items-center justify-center animate-in fade-in duration-200">
               {badge}
             </span>
           )}

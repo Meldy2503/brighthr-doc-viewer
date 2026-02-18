@@ -135,13 +135,14 @@ export const FileList: React.FC<FileListProps> = ({
       </div>
 
       {!isFiltered && (
-        <div className= " bg-page pt-2 fixed bottom-0 left-[calc(50%+30px)] -translate-x-1/2 md:static md:translate-x-0 md:mt-6 flex flex-col items-center justify-center gap-4 z-40 md:border-t md:border-border md:pt-6 w-full pointer-events-none md:pointer-events-auto">
-          <div className="pointer-events-auto flex items-center gap-3 shadow-lg md:shadow-none bg-page md:bg-transparent p-1 rounded-xl md:p-0">
+        <div className="bg-page md:bg-transparent pt-2 pb-2 px-4 fixed bottom-0 left-0 w-full z-40 border-t border-border md:static md:border-none md:p-0 md:mt-6 md:flex md:flex-col md:items-center md:pointer-events-auto">
+          <div className="pointer-events-auto flex items-center justify-center gap-3 md:shadow-none bg-page md:bg-transparent rounded-xl w-full md:w-auto">
             {hasMore ? (
               <button
+                aria-label="Show more"
                 onClick={handleShowMore}
                 disabled={isLoadinggMore}
-                className="group flex items-center gap-2 px-4 py-2 border border-pink-400 text-pink-500 text-sm font-semibold rounded-lg hover:bg-pink-400 hover:text-white transition-all duration-300 shadow-sm active:scale-95 disabled:opacity-70"
+                className="group flex items-center justify-center gap-2 px-4 py-2 w-fit md:w-auto md:py-2 border border-pink-400 text-pink-500 text-sm font-semibold rounded-lg hover:bg-pink-400 hover:text-white transition-all duration-300 active:scale-95 disabled:opacity-70"
               >
                 {isLoadinggMore ? (
                   <Loader2 className="w-4 h-4 animate-spin" />
@@ -153,8 +154,9 @@ export const FileList: React.FC<FileListProps> = ({
             ) : (
               limit > 10 && (
                 <button
+                  aria-label="Show less"
                   onClick={handleShowLess}
-                  className="flex items-center gap-2 px-4 py-2 border border-text-mid text-text-mid text-sm font-medium rounded-xl hover:bg-card hover:shadow-inner transition-all active:scale-95"
+                  className="flex items-center justify-center gap-2 px-4 py-2 w-fit md:w-auto md:py-2 border border-text-mid text-text-mid text-sm font-medium rounded-xl hover:bg-card hover:shadow-inner transition-all active:scale-95"
                 >
                   <ChevronUp className="w-4 h-4" />
                   Show Less

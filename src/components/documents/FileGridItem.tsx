@@ -44,6 +44,7 @@ export const FileGridItem: React.FC<FileGridItemProps> = ({
         <div className="flex items-center gap-1">
           {isFolder ? (
             <button
+              aria-label="Open folder"
               className="p-1.5 bg-card/80 backdrop-blur-sm rounded-lg hover:text-amber text-text-light border border-border shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200"
               title="Open Folder"
             >
@@ -51,6 +52,7 @@ export const FileGridItem: React.FC<FileGridItemProps> = ({
             </button>
           ) : (
             <button
+              aria-label="Preview"
               className="p-1.5 bg-card/80 backdrop-blur-sm rounded-lg hover:text-amber text-text-light border border-border shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200"
               onClick={(e) => {
                 e.stopPropagation();

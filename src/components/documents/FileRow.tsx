@@ -96,6 +96,7 @@ export const FileRow: React.FC<FileRowProps> = ({
             {/* Navigate into folder button */}
             {onNavigate && (
               <button
+                aria-label="Open folder"
                 className="p-1.5 rounded-lg border border-border hover:border-amber hover:bg-amber/10 transition-colors shrink-0"
                 onClick={(e) => {
                   e.stopPropagation();
@@ -109,6 +110,7 @@ export const FileRow: React.FC<FileRowProps> = ({
 
             {/* Expand/collapse chevron */}
             <button
+              aria-label="Expand folder"
               className="p-1.5 shrink-0 ml-2"
               onClick={(e) => {
                 e.stopPropagation();
@@ -124,6 +126,7 @@ export const FileRow: React.FC<FileRowProps> = ({
         ) : (
           /* Preview button for files */
           <button
+            aria-label="Preview file"
             data-testid="preview-button" 
             className="p-1.5 text-text-light hover:text-amber hover:bg-amber/10 rounded-lg transition-colors"
             onClick={(e) => {

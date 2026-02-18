@@ -82,6 +82,7 @@ const Header = ({ icon, title, onClose }: HeaderProps) => (
       </h3>
     </div>
     <button
+      aria-label="Close modal"
       onClick={onClose}
       className="w-[30px] h-[30px] flex items-center justify-center border border-border rounded-lg text-text-light hover:text-text-primary hover:border-text-primary transition-colors shrink-0"
     >
@@ -108,6 +109,7 @@ const Footer = ({
     <div className="h-px bg-border mb-[18px]" />
     <div className="flex gap-2.5">
       <button
+        aria-label="Primary action"
         onClick={onPrimary}
         className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-pink text-white text-[13.5px] font-semibold rounded-lg hover:bg-pink-light hover:-translate-y-px hover:shadow-lg hover:shadow-pink/30 transition-all"
       >
@@ -116,6 +118,7 @@ const Footer = ({
       </button>
       {secondaryLabel && (
         <button
+          aria-label="Secondary action"
           onClick={onSecondary}
           className="px-4 py-2.5 border border-border rounded-lg flex items-center gap-2 text-[13.5px] font-medium text-text-mid hover:text-text-primary hover:border-text-primary transition-colors"
         >
