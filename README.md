@@ -1,8 +1,7 @@
-
 # 📂 Document Viewer
 
-| Light Mode | Dark Mode |
-|------------|-----------|
+| Light Mode                                  | Dark Mode                                 |
+| ------------------------------------------- | ----------------------------------------- |
 | ![Light Mode](./screenshots/light-mode.png) | ![Dark Mode](./screenshots/dark-mode.png) |
 
 A modern, responsive document management interface to provide a seamless way for users to browse files and folders. The application is designed to be fast, user-friendly, and visually consistent across all devices.
@@ -13,25 +12,25 @@ A modern, responsive document management interface to provide a seamless way for
 
 ## ✨ Features
 
-* **Folder Navigation:** Users can open folders to view contents or use the "breadcrumb" links at the top to navigate back through the folder hierarchy.
-* **Folder Expansion:** I added the ability to view folder contents via a dropdown toggle or by clicking the folder icon directly.
-* **Search & Sorting:** I implemented a real-time search bar to filter files by name. Users can also sort the list by **Name** or **Date** in both ascending and descending order.
-* **List & Grid Views:** I included a toggle so users can choose their preferred layout—either a detailed list for information-density or a visual grid for easier browsing.
-* **Pagination Control:** I used "Show More" and "Show Less" buttons to give users control over how many items are displayed on the screen at one time.
-* **Theme Support:** I integrated a Dark and Light mode toggle for an improved user experience. The app remembers your preference even after you close your browser.
-* **Visual Consistency:** I utilized automated testing (Visual Regression) to significantly reduce production errors and ensure a polished UI.
+- **Folder Navigation:** Users can open folders to view contents or use the "breadcrumb" links at the top to navigate back through the folder hierarchy.
+- **Folder Expansion:** I added the ability to view folder contents via a dropdown toggle or by clicking the folder icon directly.
+- **Search & Sorting:** I implemented a real-time search bar to filter files by name. Users can also sort the list by **Name** or **Date** in both ascending and descending order.
+- **List & Grid Views:** I included a toggle so users can choose their preferred layout—either a detailed list for information-density or a visual grid for easier browsing.
+- **Pagination Control:** I used "Show More" and "Show Less" buttons to give users control over how many items are displayed on the screen at one time.
+- **Theme Support:** I integrated a Dark and Light mode toggle for an improved user experience. The app remembers your preference even after you close your browser.
+- **Visual Consistency:** I utilized automated testing (Visual Regression) to significantly reduce production errors and ensure a polished UI.
 
 ---
 
 ## 🛠 Technology Stack
 
-* **Core:** React 19 (for a modern, fast, and reactive user interface).
-* **Build Tool:** Vite (for near-instant development builds and optimized loading).
-* **Language:** TypeScript (to ensure the code is reliable, typed, and error-free).
-* **Styling:** Tailwind CSS (leveraging CSS variables for easy theme management).
-* **State Management:** Context API (to handle theme and navigation state globally).
-* **Icons:** Lucide React (for clean, consistent, and lightweight vector icons).
-* **Testing:** Playwright (for automated end-to-end and visual regression tests).
+- **Core:** React 19 (for a modern, fast, and reactive user interface).
+- **Build Tool:** Vite (for near-instant development builds and optimized loading).
+- **Language:** TypeScript (to ensure the code is reliable, typed, and error-free).
+- **Styling:** Tailwind CSS (leveraging CSS variables for easy theme management).
+- **State Management:** Context API (to handle theme and navigation state globally).
+- **Icons:** Lucide React (for clean, consistent, and lightweight vector icons).
+- **Testing:** Playwright (for automated end-to-end and visual regression tests).
 
 ---
 
@@ -75,9 +74,9 @@ The app will be available at **http://localhost:5173**.
 
 I included a testing suite to ensure the application remains stable during development.
 
-* **Run Background Tests:** `npm run test:e2e`
-* **Open the Test UI:** `npm run test:e2e:ui` (This allows you to see the automated browser performing the tests in real-time).
-* **View Results:** `npm run test:e2e:report`
+- **Run Background Tests:** `npm run test:e2e`
+- **Open the Test UI:** `npm run test:e2e:ui` (This allows you to see the automated browser performing the tests in real-time).
+- **View Results:** `npm run test:e2e:report`
 
 ---
 
@@ -86,13 +85,12 @@ I included a testing suite to ensure the application remains stable during devel
 For the features currently in the roadmap, I have outlined my intended technical approach below:
 
 1. **Multi-Select Option & Batch Deletion**
-* **Approach:** I will use a `Set` in the component state to track selected file IDs for high-performance lookups and toggle a floating "Delete" action bar when the selection is not empty.
 
+- **Approach:** I will use a `Set` in the component state to track selected file IDs for high-performance lookups and toggle a floating "Delete" action bar when the selection is not empty.
 
 2. **Read/Unread Tracking**
-* **Approach:** I plan to add an `isRead` property to the file data that toggles to `true` upon a click event, using storage to persist these states and a CSS-based blue dot indicator on the files for visual clarity.
 
-
+- **Approach:** I plan to add an `isRead` property to the file data that toggles to `true` upon a click event, using storage to persist these states and a CSS-based blue dot indicator on the files for visual clarity.
 
 ---
 

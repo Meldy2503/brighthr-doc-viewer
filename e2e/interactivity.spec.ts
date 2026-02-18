@@ -10,7 +10,7 @@ test.describe("Search, Sort, and Pagination", () => {
   });
 
   test("should search and filter files", async ({ page }) => {
-    const searchInput = page.getByPlaceholder(/Filter files/i);
+    const searchInput = page.getByPlaceholder(/Search files/i);
     await searchInput.fill("Policy");
 
     const rows = page.locator('[data-testid="file-row"]');

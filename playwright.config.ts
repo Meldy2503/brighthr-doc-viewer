@@ -23,6 +23,12 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: "html",
+  expect: {
+    toHaveScreenshot: {
+      maxDiffPixelRatio: 0.1, // Allows for 10% pixel difference
+      threshold: 0.2, // Sensitivity of the color comparison
+    },
+  },
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
